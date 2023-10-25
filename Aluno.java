@@ -1,10 +1,10 @@
-public class Aluno{
+public class Aluno {
     private String nome;
     private double media;
     private int numFaltas;
     private int numAulas;
 
-    //fazer o get e o set, além do método construtor padrão
+    // fazer o get e o set, além do método construtor padrão
 
     public String getNome() {
         return nome;
@@ -37,45 +37,48 @@ public class Aluno{
     public void setNumAulas(int numAulas) {
         this.numAulas = numAulas;
     }
-    
-    public Aluno(){
+
+    public Aluno() {
 
     }
 
-    public void Aluno(String nome){
+    public void Aluno(String nome) {
         this.nome = nome;
 
     }
 
-    public void Aluno(String nome, double media){
+    public void Aluno(String nome, double media) {
         this.nome = nome;
         this.media = media;
     }
 
-    public void Aluno(String nome, double media, int numFaltas){
+    public void Aluno(String nome, double media, int numFaltas) {
         this.nome = nome;
         this.media = media;
         this.numFaltas = numFaltas;
     }
 
-    public void Aluno(String nome, double media, int numFaltas, int numAulas){
+    public void Aluno(String nome, double media, int numFaltas, int numAulas) {
         this.nome = nome;
         this.media = media;
         this.numFaltas = numFaltas;
         this.numAulas = numAulas;
     }
 
-    public void cadastrar(String nome){
+    public void cadastrar(String nome) {
         this.nome = nome;
     }
 
-    //verificaSituacao
+    // verificaSituacao
 
-    public boolean verificaSituacao(){
-        if((media<5) || (numFaltas<25)){
+    public boolean verificaSituacao() {
+        if ((media < 5) || (numFaltas > 25)) {
             return false;
         }
-        return true;
-    }
 
+        else if ((media >= 5) && (numFaltas < 25)) {
+            return true;
+        } else
+            return true;
+    }
 }
