@@ -65,4 +65,17 @@ public class Aluno{
         this.numAulas = numAulas;
     }
 
+    public void cadastrar(String nome){
+        this.nome = nome;
+    }
+
+    //verificaSituacao
+
+    public boolean verificaSituacao(){
+        if((media<5) || (numFaltas<25)){
+            return false;
+        }
+        return true;
+    }
+
 }
